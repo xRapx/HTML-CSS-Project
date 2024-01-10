@@ -131,8 +131,11 @@ body {
 #slider{
     position: relative;
     margin-top: 46px;
-    padding-top: 50%;
-    background: url('/assets/img/main-image-1000px.jpg') top center / cover no-repeat ;
+    /* background: url('/assets/img/main-image-1000px.jpg') top center / cover no-repeat ; */
+}
+#slider .slider-img {
+    width: 100%;
+    vertical-align: middle;
 }
 #slider .text-content{
     position: absolute;
