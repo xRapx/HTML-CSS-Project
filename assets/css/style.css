@@ -1,0 +1,208 @@
+/*Reset CSS*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+ 
+}
+
+/*
+1. Từ ngoài vào trong 
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+*/
+
+/*
+1. VỊ TRÍ
+2. KÍCH THƯỚC
+3. MÀU SẮC
+4. KIỂU DÁNG
+*/
+/* Dùng class Clear khi sử dụng Float không ôm thẻ con */
+.clear{
+    clear: both;
+}
+
+#wrapper{
+
+}
+
+/* Header */
+#header{
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+
+#nav , .subnav{
+    list-style-type: none;
+}
+
+/* Menu */
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+/* Phân Cấp trực tiếp tránh ảnh hưởng thẻ "a" của "subnav" */
+#nav > li > a {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+
+}
+#nav li:hover .subnav{
+    display: block;
+}
+/* Chỉ ảnh hưởng hover cấp 1 và nhóm 2 cặp class có thuộc tính như nhau*/
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    background-color: #ccc;
+    color: #000;
+    display:inline-block ;
+}
+
+/* Subnav */
+#nav .subnav {
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav li{
+    width: 200px;
+}
+
+#nav .subnav  a {
+    color: #000;
+    width: 200px;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#header .search {
+    float: right;
+}
+
+#header .search:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    font-size: 20px;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 22px;
+}
+
+/* Banner */
+#banner{
+
+}
+
+/* Slider */
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/main-image-1000px.jpg') top center / cover no-repeat ;
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slider .text-heading{
+    text-align: center;
+    font-weight: 500;
+}
+#slider .text-description {
+    margin-top: 25px;
+}
+/* Container */
+#container{
+    /* height: 1000px;
+    background-color: #ccc;   */
+}
+
+/* Content */
+#content{
+
+}
+#content .content-section{
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading{
+    letter-spacing: 4px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    margin: 10px 0;
+}
+#content .section-sub-heading {
+    text-align: center;
+    line-height: 1.5;
+    margin: 15px 0;
+    font-size: 15px;
+    font-style: oblique;
+    opacity: 0.6;  
+}
+#content .about-text{
+    text-align: justify;
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+#content .member-list{
+    margin-top: 48px;
+    /* Khắc phục lỗi không ôm childrend khi sử dụng Float */
+    /* overflow: hidden; */
+}
+#content .member-item{
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+#content .member-name{
+    margin: 15px 0;
+    font-size: 15px;
+}
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 5px;
+}
+/* Footer */
+#footer{
+
+}
