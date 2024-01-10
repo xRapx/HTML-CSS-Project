@@ -1,14 +1,19 @@
 /*Reset CSS*/
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-white:#fff;
+    --color-black:#000;
+    --color-gray:#ccc;
+    --color-full-ticket:#f44336;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
- 
+    font-family: "Poppins", sans-serif;
 }
 
 /*
@@ -29,7 +34,7 @@ body {
 }
 
 .text-white{
-    color: #fff !important;
+    color: var(--color-white) !important;
 }
 
 #wrapper{
@@ -39,7 +44,7 @@ body {
 /* Header */
 #header{
     height: 46px;
-    background-color: #000;
+    background-color: var(--color-black);
     position: fixed;
     top: 0;
     left: 0;
@@ -65,7 +70,7 @@ body {
 /* Phân Cấp trực tiếp tránh ảnh hưởng thẻ "a" của "subnav" */
 #nav > li > a {
     text-transform: uppercase;
-    color: #fff;
+    color: var(--color-white);
 }
 
 #nav li a {
@@ -80,8 +85,8 @@ body {
 /* Chỉ ảnh hưởng hover cấp 1 và nhóm 2 cặp class có thuộc tính như nhau*/
 #nav > li:hover > a,
 #nav .subnav li:hover a {
-    background-color: #ccc;
-    color: #000;
+    background-color: var(--color-gray);
+    color: var(--color-black);
     display:inline-block ;
 }
 
@@ -91,7 +96,7 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    background-color: #fff;
+    background-color: var(--color-white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -100,7 +105,7 @@ body {
 }
 
 #nav .subnav  a {
-    color: #000;
+    color: var(--color-black);
     width: 200px;
     padding: 0 12px;
     line-height: 38px;
@@ -111,13 +116,13 @@ body {
 }
 
 #header .search:hover{
-    background-color: #f44336;
+    background-color: var(--color-full-ticket);
     cursor: pointer;
 }
 
 #header .search-icon {
     font-size: 20px;
-    color: #fff;
+    color: var(--color-white);
     line-height: 46px;
     padding: 0 22px;
 }
@@ -140,7 +145,7 @@ body {
 #slider .text-content{
     position: absolute;
     bottom: 47px;
-    color: #fff;
+    color: var(--color-white);
     left: 50%;
     transform: translateX(-50%);
 }
@@ -155,7 +160,7 @@ body {
 /* Container */
 #container{
     /* height: 1000px;
-    background-color: #ccc;   */
+    background-color: var(--color-gray);   */
 }
 
 /* Content */
@@ -211,13 +216,13 @@ body {
 }
 /* Tour section */
 .tour-section{
-    background-color: #000;
+    background-color: var(--color-black);
     margin-top:40px;
 }
 .tickets-list{
     margin-top: 40px;
     list-style: none;
-    background-color: #fff;
+    background-color: var(--color-white);
 }
 .tickets-list li {
     color:#757575;
@@ -226,8 +231,8 @@ body {
     border-bottom: 1px solid #ddd;
 }
 .tickets-list .sold-out{
-    background-color: #f44336;
-    color: #fff;
+    background-color: var(--color-full-ticket);
+    color: var(--color-white);
     padding: 3px 4px;
     margin-left: 16px;
 }
@@ -235,8 +240,8 @@ body {
     float: right;
     width: 24px;
     height: 24px;
-    background-color: #000;
-    color:#fff;
+    background-color: var(--color-black);
+    color:var(--color-white);
     border-radius: 50%;
     text-align: center;
     line-height: 24px;
@@ -260,7 +265,7 @@ body {
     display: block;
 }
 .place-body{
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 16px;
     font-size: 15px;
 }
@@ -277,12 +282,12 @@ body {
     line-height: 1.4;
 }
 .place-buy-btn:hover{
-    color: #000;
-    background-color: #ccc;
+    color: var(--color-black);
+    background-color: var(--color-gray);
 }
 .place-buy-btn{
-    color: #fff;
-    background-color: #000;
+    color: var(--color-white);
+    background-color: var(--color-black);
     text-decoration: none;
     padding:11px 16px;
     display: inline-block;
@@ -302,15 +307,19 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;
-    display: flex;
     display: none;
 }
+.modal.open{
+    display: flex;
+}
 .modal-container{
-    background-color: #fff;
+    background-color: var(--color-white);
     width: 900px;
     min-height: 200px;
     position: relative;
     max-width: calc(100% - 32px);
+    animation: modalFadeIn ease 0.5s ;
+
 }
 .icon-close:hover{
     opacity: 1;
@@ -319,7 +328,7 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    color: #fff;
+    color: var(--color-white);
     padding: 12px;
     cursor: pointer;
     opacity: 0.8;
@@ -331,7 +340,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size:30px;
-    color: #fff;
+    color: var(--color-white);
 }
 .icon-bag{
     margin-right: 16px;
@@ -348,7 +357,7 @@ body {
 
 }
 .modal-inpput{
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-gray);
     width: 100%;
     padding: 10px;
     font-size: 15px;
@@ -360,7 +369,7 @@ body {
 #buy-tickets{
     background-color: #009688;
     border: none;
-    color: #fff;
+    color: var(--color-white);
     width: 100%;
     font-size: 15px;
     text-transform: uppercase;
@@ -373,4 +382,15 @@ body {
 }
 .modal-footer a{
     color:#2196f3;
+}
+
+@keyframes modalFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
