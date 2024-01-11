@@ -11,6 +11,9 @@
     --color-gray:#ccc;
     --color-full-ticket:#f44336;
 }
+html{
+    scroll-behavior:smooth ;
+}
 
 body {
     font-family: "Poppins", sans-serif;
@@ -28,6 +31,35 @@ body {
 3. MÀU SẮC
 4. KIỂU DÁNG
 */
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-3{
+    width: 33.33333%
+}
+.col-2{
+    width: 50%;
+}
+.col-1{
+    width: 100%;
+}
 /* Dùng class Clear khi sử dụng Float không ôm thẻ con */
 .clear{
     clear: both;
@@ -35,6 +67,12 @@ body {
 
 .text-white{
     color: var(--color-white) !important;
+}
+.text-center{
+    text-align: center !important;
+}
+.pull-right{
+    float: right!important;
 }
 
 #wrapper{
@@ -171,7 +209,7 @@ body {
     width: 800px;
     margin-right: auto;
     margin-left: auto;
-    padding: 64px 0;
+    padding: 64px 0 112px;
 }
 
 #content .section-heading{
@@ -195,6 +233,7 @@ body {
     font-size: 15px;
     line-height: 1.5;
 }
+/* No use because use row and col */
 #content .member-list{
     margin-top: 48px;
     /* Khắc phục lỗi không ôm childrend khi sử dụng Float */
@@ -205,6 +244,8 @@ body {
     width: calc(100% / 3);
     text-align: center;
 }
+/* end change row and col */
+
 #content .member-name{
     margin: 15px 0;
     font-size: 15px;
@@ -250,13 +291,13 @@ body {
 /* Places */
 .places-list{
     overflow: hidden;
-    margin: 32px -8px 48px;
+    margin-top: 32px;
 }
-.place-item{
-    float: left;
+/* khi dunng ROW and COL */
+/* .place-item{
     width: 33.33333%;
     padding: 0 8px;  
-}
+} */
 .place-img:hover{
     opacity: 0.6;
 }
@@ -281,21 +322,50 @@ body {
     margin-top: 15px;
     line-height: 1.4;
 }
-.place-buy-btn:hover{
+.btn:hover{
     color: var(--color-black);
     background-color: var(--color-gray);
+    cursor: pointer;
 }
-.place-buy-btn{
+.btn{
     color: var(--color-white);
     background-color: var(--color-black);
     text-decoration: none;
     padding:11px 16px;
     display: inline-block;
     margin-top: 15px;
+    border: none;   
 }
+
+/* map */
+.map-section img{
+    width: 100%;
+}
+
 /* Footer */
 #footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list{
+    font-size: 24px;
+}
 
+#footer .copyright a,
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .social-list a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.6);
 }
 /* Modal */
 .modal{
@@ -382,6 +452,28 @@ body {
 }
 .modal-footer a{
     color:#2196f3;
+}
+
+/* contact */
+.contact-control{
+    margin-top: 48px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display:inline-block;
+    
+}
+.contact-form{
+    font-size:15px;
+}
+.form-control{
+    padding:11px;
+    border:1px solid var(--color-gray);
+    width:100%
 }
 
 @keyframes modalFadeIn {
