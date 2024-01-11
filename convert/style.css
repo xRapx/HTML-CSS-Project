@@ -6,13 +6,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --color-white:#fff;
-  --color-black:#000;
-  --color-gray:#ccc;
-  --color-full-ticket:#f44336;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -70,7 +63,7 @@ body {
 }
 
 .text-white {
-  color: var(--color-white) !important;
+  color: #fff;
 }
 
 .text-center {
@@ -82,14 +75,14 @@ body {
 }
 
 .btn:hover {
-  color: var(--color-black);
-  background-color: var(--color-gray);
+  color: #000;
+  background-color: #ccc;
   cursor: pointer;
 }
 
 .btn {
-  color: var(--color-white);
-  background-color: var(--color-black);
+  color: #fff;
+  background-color: #000;
   text-decoration: none;
   padding: 11px 16px;
   display: inline-block;
@@ -100,7 +93,7 @@ body {
 /* Header */
 #header {
   height: 46px;
-  background-color: var(--color-black);
+  background-color: #000;
   position: fixed;
   top: 0;
   left: 0;
@@ -116,7 +109,7 @@ body {
   display: none;
   position: absolute;
   top: 100%;
-  background-color: var(--color-white);
+  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 #header #nav .subnav li {
@@ -124,12 +117,12 @@ body {
   position: relative;
 }
 #header #nav .subnav li:hover a {
-  background-color: var(--color-gray);
-  color: var(--color-black);
+  background-color: #ccc;
+  color: #000;
   display: inline-block;
 }
 #header #nav .subnav a {
-  color: var(--color-black);
+  color: #000;
   width: 200px;
   padding: 0 12px;
   line-height: 38px;
@@ -143,13 +136,13 @@ body {
   display: block;
 }
 #header #nav li:hover > a {
-  background-color: var(--color-gray);
-  color: var(--color-black);
+  background-color: #ccc;
+  color: #000;
   display: inline-block;
 }
 #header #nav a {
   text-transform: uppercase;
-  color: var(--color-white);
+  color: #fff;
   text-decoration: none;
   line-height: 46px;
   padding: 0 24px;
@@ -159,12 +152,12 @@ body {
 }
 #header .search .search-icon {
   font-size: 20px;
-  color: var(--color-white);
+  color: #fff;
   line-height: 46px;
   padding: 0 22px;
 }
 #header .search:hover {
-  background-color: var(--color-full-ticket);
+  background-color: #f44336;
   cursor: pointer;
 }
 
@@ -182,7 +175,7 @@ body {
 #slider .text-content {
   position: absolute;
   bottom: 47px;
-  color: var(--color-white);
+  color: #fff;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -197,7 +190,7 @@ body {
 /* Container */
 #container {
   /* height: 1000px;
-  background-color: var(--color-gray);   */
+  background-color: c.$Gray;   */
   /* Content */
 }
 #container #content .content-section {
@@ -237,14 +230,14 @@ body {
   border-radius: 5px;
 }
 #container #content .tour-section {
-  background-color: var(--color-black);
+  background-color: #000;
   margin-top: 40px;
   /* Places */
 }
 #container #content .tour-section .tickets-list {
   margin-top: 40px;
   list-style: none;
-  background-color: var(--color-white);
+  background-color: #fff;
   overflow: hidden;
 }
 #container #content .tour-section .tickets-list li {
@@ -254,8 +247,8 @@ body {
   border-bottom: 1px solid #ddd;
 }
 #container #content .tour-section .tickets-list li .sold-out {
-  background-color: var(--color-full-ticket);
-  color: var(--color-white);
+  background-color: #f44336;
+  color: #fff;
   padding: 3px 4px;
   margin-left: 16px;
 }
@@ -263,8 +256,8 @@ body {
   float: right;
   width: 24px;
   height: 24px;
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: #000;
+  color: #fff;
   border-radius: 50%;
   text-align: center;
   line-height: 24px;
@@ -282,7 +275,7 @@ body {
   display: block;
 }
 #container #content .tour-section .places-list .place-body {
-  background-color: var(--color-white);
+  background-color: #fff;
   padding: 16px;
   font-size: 15px;
 }
@@ -314,7 +307,7 @@ body {
 }
 #container #content .contact-control .contact-form .form-control {
   padding: 11px;
-  border: 1px solid var(--color-gray);
+  border: 1px solid #ccc;
   width: 100%;
 }
 
@@ -359,7 +352,7 @@ body {
   display: none;
 }
 .modal .modal-container {
-  background-color: var(--color-white);
+  background-color: #fff;
   width: 900px;
   min-height: 200px;
   position: relative;
@@ -370,7 +363,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  color: var(--color-white);
+  color: #fff;
   padding: 12px;
   cursor: pointer;
   opacity: 0.8;
@@ -398,7 +391,7 @@ body {
   margin-bottom: 12px;
 }
 .modal .modal-container .modal-body .modal-inpput {
-  border: 1px solid var(--color-gray);
+  border: 1px solid #ccc;
   width: 100%;
   padding: 10px;
   font-size: 15px;
@@ -407,7 +400,7 @@ body {
 .modal .modal-container .modal-body #buy-tickets {
   background-color: #009688;
   border: none;
-  color: var(--color-white);
+  color: #fff;
   width: 100%;
   font-size: 15px;
   text-transform: uppercase;

@@ -1,16 +1,13 @@
 /*Reset CSS*/
+@use 'assets' as c;
+
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-:root{
-    --color-white:#fff;
-    --color-black:#000;
-    --color-gray:#ccc;
-    --color-full-ticket:#f44336;
-}
+
 html{
     scroll-behavior:smooth ;
 }
@@ -61,7 +58,7 @@ body {
     width: 100%;
 }
 .text-white{
-    color: var(--color-white) !important;
+    color: c.$White ;
 }
 .text-center{
     text-align: center !important;
@@ -70,13 +67,13 @@ body {
     float: right!important;
 }
 .btn:hover{
-    color: var(--color-black);
-    background-color: var(--color-gray);
+    color: c.$Black;
+    background-color: c.$Gray;
     cursor: pointer;
 }
 .btn{
-    color: var(--color-white);
-    background-color: var(--color-black);
+    color: c.$White;
+    background-color: c.$Black;
     text-decoration: none;
     padding:11px 16px;
     display: inline-block;
@@ -89,7 +86,7 @@ body {
 /* Header */
 #header{
     height: 46px;
-    background-color: var(--color-black);
+    background-color: c.$Black;
     position: fixed;
     top: 0;
     left: 0;
@@ -105,7 +102,7 @@ body {
             display: none;
             position: absolute;
             top: 100%;
-            background-color: var(--color-white);
+            background-color: c.$White;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
             li{
@@ -114,13 +111,13 @@ body {
             }
 
             li:hover a{
-                background-color: var(--color-gray);
-                color: var(--color-black);
+                background-color: c.$Gray;
+                color: c.$Black;
                 display:inline-block ;
             }
 
             a {
-                color: var(--color-black);
+                color: c.$Black;
                 width: 200px;
                 padding: 0 12px;
                 line-height: 38px;
@@ -138,14 +135,14 @@ body {
         }
 
         li:hover>a{
-            background-color: var(--color-gray);
-            color: var(--color-black);
+            background-color: c.$Gray;
+            color: c.$Black;
             display:inline-block ;
         }
 
         a {
             text-transform: uppercase;
-            color: var(--color-white);
+            color: c.$White;
             text-decoration: none;
             line-height: 46px;
             padding: 0 24px;
@@ -157,13 +154,13 @@ body {
 
         .search-icon {
             font-size: 20px;
-            color: var(--color-white);
+            color: c.$White;
             line-height: 46px;
             padding: 0 22px;
         }
     }
     .search:hover{
-        background-color: var(--color-full-ticket);
+        background-color: c.$Red;
         cursor: pointer;
     }
 }
@@ -185,7 +182,7 @@ body {
     .text-content{
         position: absolute;
         bottom: 47px;
-        color: var(--color-white);
+        color: c.$White;
         left: 50%;
         transform: translateX(-50%);
         
@@ -203,7 +200,7 @@ body {
 /* Container */
 #container{
     /* height: 1000px;
-    background-color: var(--color-gray);   */
+    background-color: c.$Gray;   */
     /* Content */
     #content{
 
@@ -245,13 +242,13 @@ body {
             }
         }
         .tour-section{
-            background-color: var(--color-black);
+            background-color: c.$Black;
             margin-top:40px;
 
             .tickets-list{
                 margin-top: 40px;
                 list-style: none;
-                background-color: var(--color-white);
+                background-color: c.$White;
                 overflow: hidden;
                 
                  li {
@@ -261,8 +258,8 @@ body {
                     border-bottom: 1px solid #ddd;
 
                     .sold-out{
-                        background-color: var(--color-full-ticket);
-                        color: var(--color-white);
+                        background-color: c.$Red;
+                        color: c.$White;
                         padding: 3px 4px;
                         margin-left: 16px;
                     }
@@ -270,8 +267,8 @@ body {
                         float: right;
                         width: 24px;
                         height: 24px;
-                        background-color: var(--color-black);
-                        color:var(--color-white);
+                        background-color: c.$Black;
+                        color:c.$White;
                         border-radius: 50%;
                         text-align: center;
                         line-height: 24px;
@@ -293,7 +290,7 @@ body {
                     display: block;
                 }
                 .place-body{
-                    background-color: var(--color-white);
+                    background-color: c.$White;
                     padding: 16px;
                     font-size: 15px;
 
@@ -331,7 +328,7 @@ body {
 
                 .form-control{
                     padding:11px;
-                    border:1px solid var(--color-gray);
+                    border:1px solid c.$Gray;
                     width:100%
                 }
             }
@@ -390,7 +387,7 @@ body {
     display: none;
 
     .modal-container{
-        background-color: var(--color-white);
+        background-color: c.$White;
         width: 900px;
         min-height: 200px;
         position: relative;
@@ -402,7 +399,7 @@ body {
                 position: absolute;
                 right: 0;
                 top: 0;
-                color: var(--color-white);
+                color: c.$White;
                 padding: 12px;
                 cursor: pointer;
                 opacity: 0.8;
@@ -413,7 +410,7 @@ body {
         }
 
         .modal-header{
-            background-color: #009688;
+            background-color: c.$Aqua;
             height: 130px;
             display: flex;
             align-items: center;
@@ -437,16 +434,16 @@ body {
                 }
             }
             .modal-inpput{
-                border: 1px solid var(--color-gray);
+                border: 1px solid c.$Gray;
                 width: 100%;
                 padding: 10px;
                 font-size: 15px;
                 margin-bottom: 24px;               
             }
             #buy-tickets{
-                background-color: #009688;
+                background-color: c.$Aqua;
                 border: none;
-                color: var(--color-white);
+                color: c.$White;
                 width: 100%;
                 font-size: 15px;
                 text-transform: uppercase;
