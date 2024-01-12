@@ -1,0 +1,138 @@
+#container{
+    /* height: 1000px;
+    background-color: $Gray;   */
+    /* Content */
+    #content{
+
+        .content-section{
+            width: 800px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 64px 0 112px;
+
+            .section-heading{
+                letter-spacing: 4px;
+                font-size: 30px;
+                text-align: center;
+                font-weight: 400;
+                margin: 10px 0;
+            }
+            .section-sub-heading {
+                text-align: center;
+                line-height: 1.5;
+                margin: 15px 0;
+                font-size: 15px;
+                font-style: oblique;
+                opacity: 0.6;  
+            }
+            .about-text{
+                text-align: justify;
+                margin: 15px 0;
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .member-name{
+                margin: 15px 0;
+                font-size: 15px;
+            }
+            .member-img{
+                margin-top: 15px;
+                width: 154px;
+                border-radius: 5px;
+            }
+        }
+        .tour-section{
+            background-color: $Black;
+            margin-top:40px;
+
+            .tickets-list{
+                margin-top: 40px;
+                list-style: none;
+                background-color: $White;
+                overflow: hidden;
+                
+                li {
+                    color:#757575;
+                    font-size: 15px;
+                    padding:11px 16px ;
+                    border-bottom: 1px solid #ddd;
+
+                    .sold-out{
+                        background-color: $Red;
+                        color: $White;
+                        padding: 3px 4px;
+                        margin-left: 16px;
+                    }
+                    .quantity{
+                        float: right;
+                        width: 24px;
+                        height: 24px;
+                        background-color: $Black;
+                        color:$White;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 24px;
+                        margin-top: -3px;
+                    }
+                }
+            }
+
+            /* Places */
+            .places-list{
+                overflow: hidden;
+                margin-top: 32px;
+
+                .place-img:hover{
+                    opacity: 0.6;
+                }
+                .place-img{
+                    width: 100%;
+                    display: block;
+                }
+                .place-body{
+                    background-color: $White;
+                    padding: 16px;
+                    font-size: 15px;
+
+                    .place-heading{
+                        font-size :15px;
+                        font-weight: 600;
+                    }
+                    .place-time{
+                        margin-top: 15px;
+                        color: #757575;
+                    }
+                    .place-desc{
+                        margin-top: 15px;
+                        line-height: 1.4;
+                    }
+
+                }
+            }
+        }
+
+        .contact-control{
+            margin-top: 48px;
+
+            .contact-info{
+                font-size: 18px;
+                line-height: 1.5;
+            }
+            .contact-info i[class*="ti-"]{
+                width: 30px;
+                display:inline-block;
+                
+            }
+            .contact-form{
+                font-size:15px;
+
+                .form-control{
+                    padding:11px;
+                    border:1px solid $Gray;
+                    width:100%
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,82 @@
+/*Reset CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior:smooth ;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/*
+1. Từ ngoài vào trong 
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+*/
+
+/*
+1. VỊ TRÍ
+2. KÍCH THƯỚC
+3. MÀU SẮC
+4. KIỂU DÁNG
+*/
+.row{
+    margin-left: $mr-l;
+    margin-right: $mr-r;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+.col{
+    float: left;
+    padding-left: $pd-l;
+    padding-right: $pd-r;
+}
+.col-3{
+    width: $w-33;
+}
+.col-2{
+    width: $w-50;
+}
+.col-1{
+    width: $w-100;
+}
+.text-white{
+    color: $White ;
+}
+.text-center{
+    text-align: center !important;
+}
+.pull-right{
+    float: right!important;
+}
+.btn:hover{
+    color: $Black;
+    background-color: $Gray;
+    cursor: pointer;
+}
+.btn{
+    color: $White;
+    background-color: $Black;
+    text-decoration: none;
+    padding:11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;   
+}
+#wrapper{
+
+}

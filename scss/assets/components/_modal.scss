@@ -1,0 +1,106 @@
+/* Modal */
+.modal{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    .modal-container{
+        background-color: $White;
+        width: 900px;
+        min-height: 200px;
+        position: relative;
+        max-width: calc(100% - 32px);
+        animation: modalFadeIn ease 0.5s ;
+        
+        .modal-close{
+            .icon-close{
+                position: absolute;
+                right: 0;
+                top: 0;
+                color: $White;
+                padding: 12px;
+                cursor: pointer;
+                opacity: 0.8;
+            }
+            .icon-close:hover{
+                opacity: 1;
+            }
+        }
+
+        .modal-header{
+            background-color: $Aqua;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size:30px;
+           
+            .icon-bag{
+                margin-right: 16px;
+            }
+        }
+        .modal-body{
+            padding: 16px;
+
+            .modal-label{
+                display: block;
+                font-size: 15px;
+                margin-bottom: 12px;
+                
+                .icon-shopping{
+
+                }
+            }
+            .modal-inpput{
+                border: 1px solid $Gray;
+                width: 100%;
+                padding: 10px;
+                font-size: 15px;
+                margin-bottom: 24px;               
+            }
+            #buy-tickets{
+                background-color: $Aqua;
+                border: none;
+                color: $White;
+                width: 100%;
+                font-size: 15px;
+                text-transform: uppercase;
+                padding: 18px;
+                cursor: pointer;
+            }
+            #buy-tickets:hover{
+                opacity: 0.8;
+            }
+
+        }
+        .modal-footer{
+            padding: 16px;
+            text-align: right;
+
+            a{
+                color:#2196f3;
+            }
+        }       
+}
+
+}
+.modal.open{
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -4,8 +4,7 @@
   "description": "https://xrapx.github.io/HTML-CSS-Project/",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass scss:convert"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC"

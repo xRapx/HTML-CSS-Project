@@ -1,0 +1,27 @@
+/* Slider */
+#slider{
+    position: relative;
+    margin-top: 46px;
+    /* background: url('/assets/img/main-image-1000px.jpg') top center / cover no-repeat ; */
+
+    .slider-img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .text-content{
+        position: absolute;
+        bottom: 47px;
+        color: $White;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        .text-heading{
+            text-align: center;
+            font-weight: 500;
+        }
+        .text-description {
+            margin-top: 25px;
+        }
+
+    }
+}
